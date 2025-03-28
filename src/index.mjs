@@ -8,13 +8,14 @@ const PORT = process.env.PORT || 3001;
 
 const mockUsers = [
     {id: 1, username: "Sway", displayName: "Sway"},
-    {id: 2, username: "Morning", displayName: "Morning"}
+    {id: 2, username: "Morning", displayName: "Morning"},
+    {id: 3, username: "Brave", displayName: "One"}
 ]
 
 
 //allow you to listen to a specific port
 app.listen(PORT, () =>{
-    console.log('Running on Port ' + PORT);
+    console.log('Running on Port http//localhost:' + PORT);
 });
 
 //Get request with route
@@ -42,3 +43,5 @@ app.get('/api/users/:id', (req, res) => {
     //else
     return res.send(findUsers);
 })
+
+//Query Parameter
